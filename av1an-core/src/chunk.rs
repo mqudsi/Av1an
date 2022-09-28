@@ -4,8 +4,9 @@ use std::path::Path;
 use av1_grain::{generate_photon_noise_params, write_grain_table, NoiseGenArgs};
 use serde::{Deserialize, Serialize};
 
+use crate::encoder::Encoder;
+use crate::settings::insert_noise_table_params;
 use crate::Input;
-use crate::{encoder::Encoder, settings::insert_noise_table_params};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Chunk {
